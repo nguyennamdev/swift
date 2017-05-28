@@ -24,7 +24,7 @@ let minutes = 60;
 for tickMark in stride(from: 0, to: minutes, by: 5){
     print("\(tickMark)")
 }
-// for 1 - 4
+
 for item in 1...5{
     print(item)
 }
