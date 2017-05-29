@@ -6,11 +6,11 @@ class Triagle{
     var a:Int
     var b:Int
     var c:Int
-    init() {
+    init?() {
         self.a = 0
         self.b = 0
         self.c = 0
-        
+        return nil
     }
 
     init?(a:Int, b:Int, c:Int) {
