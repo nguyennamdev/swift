@@ -24,6 +24,7 @@ class Triagle{
    }
 
 let aTriagle = Triagle(a:0, b:1, c:1)
+
 if aTriagle == nil{
     print("didn't make a triagle")
 }
