@@ -62,7 +62,13 @@ var trang:Wife?
 nam = Husband(name: "Nam 2")
 trang = Wife(nameWife: "Trang 2")
 nam!.wife = trang
-trang!.husband = nam
+trang?.husband = nam
+if trang?.husband != nil{
+    print("don't nil")
+}
+else{
+    print("nil")
+}
 // ARC = 1 . because used weak refereces
 nam = nil
 trang = nil
@@ -95,5 +101,5 @@ class CreditCard{
 var john:Customer?
 var card:CreditCard?
 john = Customer(name: "John")
-john!.card = CreditCard(number: 1234_5678_9012_3456, customer: john!)
+john?.card = CreditCard(number: 1234_5678_9012_3456, customer: john!)
 john = nil
