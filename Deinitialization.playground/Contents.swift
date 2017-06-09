@@ -9,9 +9,7 @@ class Person{
         self.name = name
         print("\(name) is being initialized")
     }
-    
     // deinit
-    
     deinit {
         print("\(name) is being deinitialized")
     }
@@ -33,7 +31,6 @@ p3 = nil
 // Weak references
 class Husband{
     let name:String
-    
     init(name:String) {
         self.name = name
     }
