@@ -10,6 +10,7 @@ import Foundation
 
 class MobileBL{
     private var mobiles:[Mobile] = [Mobile]()
+//    private var mobie:Set<Mobile> = Set<Mobile>()
     
     @discardableResult public func addMobile(newMobile:Mobile) -> Bool {
         for item in mobiles {
@@ -24,7 +25,7 @@ class MobileBL{
         return true
     }
     
-    func updateMobile(newMobile:Mobile) -> Bool {
+   @discardableResult func updateMobile(newMobile:Mobile) -> Bool {
         for item in mobiles {
             if item.mID == newMobile.mID{
                 item.mModel = newMobile.mModel
@@ -42,18 +43,20 @@ class MobileBL{
         return false
     }
     
-    func searchMobileById(mobileId:String) -> Mobile{
-        var mobile:Mobile = Mobile()
+    @discardableResult func searchMobileById(mobileId:String) -> Mobile?{
+        var mobile:Mobile? = Mobile()
         for item in mobiles {
             if mobileId == item.mID{
                 mobile = item
             }
+            else{
+               mobile = nil
+            }
         }
         return mobile
     }
-    
-    
-    func deleteMobile(mobileId:String) -> Bool{
+
+   @discardableResult func deleteMobile(mobileId:String) -> Bool{
         for (index,item) in mobiles.enumerated() {
             if mobileId == item.mID{
                 mobiles.remove(at: index)
@@ -63,7 +66,7 @@ class MobileBL{
         return false
     }
     
-    func getAll() -> [Mobile] {
+   @discardableResult func getAll() -> [Mobile] {
         var lstMobile = [Mobile]()
         for item in mobiles {
             lstMobile.append(item)

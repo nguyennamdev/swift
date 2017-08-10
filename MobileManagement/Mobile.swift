@@ -9,13 +9,13 @@
 import Foundation
 
 class Mobile{
-    var mID:String = ""
-    var mModel:String = ""
-    var mManufacture:String = ""
-    var size:String = ""
-    var configuration:String = ""
-    var price:Double = 0
-    var amount:Int = 0
+    var mID:String
+    var mModel:String
+    var mManufacture:String
+    var size:String
+    var configuration:String
+    var price:Double
+    var amount:Int
     
     init(mID:String!, model:String!, manu:String, size:String, confi:String, price:Double!, amount:Int!) {
         self.mID = mID
@@ -28,6 +28,28 @@ class Mobile{
     }
     
     init() {
-        
+        self.mID = ""
+        self.mModel = ""
+        self.mManufacture = ""
+        self.size = ""
+        self.configuration = ""
+        self.price = 0
+        self.amount = 0
     }
 }
+
+// Used Collection Set
+/*
+extension Mobile: Equatable {
+    static func ==(lhs: Mobile, rhs: Mobile) -> Bool {
+        return lhs.mID == rhs.mID
+    }
+}
+
+extension Mobile: Hashable{
+    var hashValue: Int {
+        get{
+            return mID.hashValue
+        }
+    }
+}*/

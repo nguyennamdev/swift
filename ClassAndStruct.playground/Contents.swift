@@ -16,8 +16,7 @@ class VideoMode{
     var name:String?
 }
 
-let hd = Resolution(wight: 1920, height: 1080) // create a object of Re...
-
+let hd = Resolution(wight: 1920, height: 1080) // create a object of Re..
 
 let video = VideoMode()
 video.resolution = hd
@@ -37,7 +36,6 @@ class DataManager{
     lazy var inport = DataInporter() // lazy property
     var data = [String]()
 }
-
 let manager = DataManager()
 manager.data.append("Hello")
 print(manager.inport.filename)

@@ -34,6 +34,10 @@ let library = [
 ]
 // the type of "library" is inferred to be [MediaItem]
 
+
+
+
+
 var movieCount = 0
 var songCount = 0
 
@@ -43,16 +47,11 @@ for item in library {
         movieCount += 1
     } else if item is Song {
         songCount += 1
-    }
 }
 
 print("Media library contains \(movieCount) movies and \(songCount) songs")
 // Prints "Media library contains 2 movies and 3 songs"
 
-var m = Movie(name: "Citizen Kane", director: "Orson Welles")
-if m is  Movie{
-    print("m is movie")
-}
 
 
 
@@ -61,3 +60,10 @@ if m is  Movie{
 
 
 
+
+
+
+
+
+
+    }
